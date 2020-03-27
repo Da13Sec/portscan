@@ -50,7 +50,7 @@ def portscan(scan_ip):
     try:
         tmp_ports=[]
         ports = []
-        command = f'echo "qpalzm123!"|sudo -S masscan '+scan_ip+' -p 1-65535 --rate 2000'
+        command = f'masscan '+scan_ip+' -p 1-65535 --rate 2000'
 
 
         child = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
